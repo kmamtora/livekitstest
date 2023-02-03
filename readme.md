@@ -1,6 +1,8 @@
 docker build -t livekittest:1.0.0 .
 
-docker run -p 5050:5050 -d livekittest:1.0.0 .
+docker run -p 5050:5050 --name kittest -d livekittest:1.0.0 .
+
+docker logs -f kittest
 
 add API, Secret and Host in .env
 
